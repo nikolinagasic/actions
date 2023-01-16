@@ -1,8 +1,10 @@
 name: Test Workflow
-on: pull_request
+on: 
+  pull_request:
+    branches: [ main, development ]
 jobs: 
   test: 
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
       matrix:
